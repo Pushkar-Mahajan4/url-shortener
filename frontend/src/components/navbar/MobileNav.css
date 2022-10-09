@@ -1,0 +1,5 @@
+.mobile-nav-container{
+    display: flex;
+    justify-content: center;
+    margin-right: 45px;
+}
