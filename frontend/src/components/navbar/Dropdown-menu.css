@@ -17,11 +17,13 @@
 
 
 li{
+    
     max-width: 100%;
     padding: 1rem;
 }
 
 .dropdown-menu-li{
+    background-color: white;
     border-bottom: solid 1px grey;
 }
 

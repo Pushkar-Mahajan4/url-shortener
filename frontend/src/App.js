@@ -1,5 +1,6 @@
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
+import Login from "./components/main-content/login-component/Login";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Navbar windowSize={windowSize} />
-      <p>ZERO TOLERANCE</p>
+      <Login />
     </div>
   );
 }
