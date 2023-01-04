@@ -3,13 +3,13 @@ const DesktopNav = () => {
         <div className="navbar-link">
             <ul>
               <li>
-                <a href="#">Link 1</a>
+                <a href="#">Home</a>
               </li>
               <li>
-                <a href="#">Link 1</a>
+                <a href="#">About</a>
               </li>
               <li>
-                <a href="#">Link 1</a>
+                <a href="#">Login</a>
               </li>
             </ul>
           </div>
