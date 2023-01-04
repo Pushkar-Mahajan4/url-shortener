@@ -1,15 +1,21 @@
+import { Link } from "react-router-dom";
+
+
 const DesktopNav = () => {
     return(
         <div className="navbar-link">
             <ul>
               <li>
-                <a href="#">Home</a>
+                <Link to="#">Home</Link>
               </li>
               <li>
-                <a href="#">About</a>
+                <Link to="#">About</Link>
               </li>
               <li>
-                <a href="#">Login</a>
+                <Link to="#">Login</Link>
+              </li>
+              <li>
+                <Link to="/error">Error</Link>
               </li>
             </ul>
           </div>
