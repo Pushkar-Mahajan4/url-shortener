@@ -1,26 +1,24 @@
-import { Link } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
 
 const DesktopNav = () => {
-    return(
-        <div className="navbar-link">
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="#">Login</Link>
-              </li>
-              <li>
-                <Link to="/error">Error</Link>
-              </li>
-            </ul>
-          </div>
-    );
-}
-
+  return (
+    <div className="navbar-link">
+      <ul>
+        <li>
+          <NavLink to="/">Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/about">About</NavLink>
+        </li>
+        <li>
+          <NavLink to="/login">Login</NavLink>
+        </li>
+        <li>
+          <NavLink to="/error">Error</NavLink>
+        </li>
+      </ul>
+    </div>
+  );
+};
 
 export default DesktopNav;
