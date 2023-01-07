@@ -12,7 +12,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { useState, useEffect } from "react";
-
 function App() {
   const [windowSize, setWindowSize] = useState(
     window.matchMedia("(min-width: 768px)")
@@ -34,13 +33,16 @@ function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Navbar />}>
-        <Route path="/" element={<Application />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Application />}>
-          <Route path="/login/check-user" element={loginAction} />
+      <Route
+        path="/"
+        element={<Navbar windowSize={windowSize} />}
+        errorElement={<Error />}
+      >
+        <Route index element={<Application />} />
+        <Route path="about" element={<About />} />
+        <Route path="login" element={<Application />}>
+          <Route path="check-user" element={loginAction} />
         </Route>
-        <Route path="*" element={<Error />} />
       </Route>
     )
   );
