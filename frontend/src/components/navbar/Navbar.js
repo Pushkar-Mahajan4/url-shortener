@@ -3,6 +3,7 @@ import DesktopNav from "./navbar-desktop";
 import MobileNav from "./MobileNav";
 
 const Navbar = (props) => {
+  console.log(props.windowSize);
   return (
     <header className="header">
       <nav className="navbar-container">
