@@ -41,7 +41,11 @@ function App() {
         <Route index element={<Application />} />
         <Route path="about" element={<About />} />
         <Route path="login" element={<Application />}>
-          <Route path="check-user" element={loginAction} />
+          <Route
+            path="check-user"
+            element={<Application />}
+            action={loginAction}
+          />
         </Route>
       </Route>
     )
