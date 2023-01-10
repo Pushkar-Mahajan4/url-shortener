@@ -1,11 +1,7 @@
 import "./Login.css";
-import { useState } from "react";
 import { Form, redirect } from "react-router-dom";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-
   return (
     <section className="flex items-center justify-center min-h-full mt-12 w-full gradient-form">
       <div className="flex items-center justify-center w-1/2 bg-white shadow-md mb-11 rounded ">
@@ -28,7 +24,6 @@ const Login = () => {
                 placeholder="Username"
                 name="username"
                 required
-                onChange={(e) => setUsername(e.target.value)}
               />
             </div>
             <div className="mb-6">
@@ -45,7 +40,6 @@ const Login = () => {
                 type="password"
                 placeholder="******************"
                 required
-                onChange={(e) => setPassword(e.target.value)}
               />
               <p className="text-red-500 text-xs italic">
                 Please choose a password.
