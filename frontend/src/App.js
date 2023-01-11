@@ -14,6 +14,7 @@ import {
 } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Dashboard from "./components/main-content/dashboard-component/Dashboard";
+import Protected from "./components/main-content/middleware/Protected";
 function App() {
   const [windowSize, setWindowSize] = useState(
     window.matchMedia("(min-width: 768px)")
@@ -58,7 +59,10 @@ function App() {
           />
         </Route>
         <Route path="user" element={<User />}>
-          <Route path="dashboard" element={<Dashboard />} />
+          <Route
+            path="dashboard"
+            element={<Protected Component={Dashboard} />}
+          />
         </Route>
       </Route>
     )
