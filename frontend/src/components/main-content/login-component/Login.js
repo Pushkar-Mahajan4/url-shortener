@@ -6,7 +6,10 @@ const Login = () => {
     <section className="flex items-center justify-center min-h-full mt-12 w-full gradient-form">
       <div className="flex items-center justify-center w-1/2 bg-white shadow-md mb-11 rounded ">
         <div className="flex w-1/2 p-4 h-full text-white">
-          <img src="https://cdn.dribbble.com/users/230290/screenshots/15128882/media/4175d17c66f179fea9b969bbf946820f.jpg?compress=1&resize=400x300" />
+          <img
+            src="https://cdn.dribbble.com/users/230290/screenshots/15128882/media/4175d17c66f179fea9b969bbf946820f.jpg?compress=1&resize=400x300"
+            alt="Logo Here"
+          />
         </div>
         <div className="flex w-1/2 p-4 h-full text-white">
           <Form method="post" action="login/check-user">
@@ -69,10 +72,9 @@ const Login = () => {
 export default Login;
 
 export const loginAction = async ({ request }) => {
-  console.log("Got in");
   const data = await request.formData();
   console.log(data.get("username"));
   console.log(data.get("password"));
 
-  return redirect("/about");
+  return redirect("/user/dashboard");
 };

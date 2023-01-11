@@ -8,10 +8,12 @@ import About from "./components/main-content/about-component/About";
 import {
   createBrowserRouter,
   createRoutesFromElements,
+  Outlet,
   Route,
   RouterProvider,
 } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Dashboard from "./components/main-content/dashboard-component/Dashboard";
 function App() {
   const [windowSize, setWindowSize] = useState(
     window.matchMedia("(min-width: 768px)")
@@ -31,6 +33,14 @@ function App() {
     );
   };
 
+  const User = () => {
+    return (
+      <div>
+        <Outlet />
+      </div>
+    );
+  };
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route
@@ -46,6 +56,9 @@ function App() {
             element={<Application />}
             action={loginAction}
           />
+        </Route>
+        <Route path="user" element={<User />}>
+          <Route path="dashboard" element={<Dashboard />} />
         </Route>
       </Route>
     )
