@@ -15,6 +15,7 @@ import {
 import { useState, useEffect } from "react";
 import Dashboard from "./components/main-content/dashboard-component/Dashboard";
 import Protected from "./components/main-content/middleware/Protected";
+import { AuthProvider } from "./components/context-provider/AuthContext";
 function App() {
   const [windowSize, setWindowSize] = useState(
     window.matchMedia("(min-width: 768px)")
@@ -68,7 +69,11 @@ function App() {
     )
   );
 
-  return <RouterProvider router={router} />;
+  return (
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  );
 }
 
 export default App;
