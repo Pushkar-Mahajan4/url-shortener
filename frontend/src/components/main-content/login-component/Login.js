@@ -1,5 +1,6 @@
 import "./Login.css";
 import { Form, redirect } from "react-router-dom";
+import { createUser } from "../../firebase-util/Firebase";
 
 const Login = () => {
   return (
@@ -73,8 +74,10 @@ export default Login;
 
 export const loginAction = async ({ request }) => {
   const data = await request.formData();
-  console.log(data.get("username"));
-  console.log(data.get("password"));
+  const signupUser = await createUser(
+    data.get("username"),
+    data.get("password")
+  );
 
-  return redirect("/user/dashboard");
+  redirect("/user/dashboard");
 };

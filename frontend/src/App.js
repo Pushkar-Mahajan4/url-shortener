@@ -54,7 +54,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="login" element={<Application />}>
           <Route
-            path="check-user"
+            path="check-user" //Need change here as Protected route
             element={<Application />}
             action={loginAction}
           />
