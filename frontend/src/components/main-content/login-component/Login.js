@@ -79,5 +79,7 @@ export const loginAction = async ({ request }) => {
     data.get("password")
   );
 
-  redirect("/user/dashboard");
+  console.log(signupUser);
+
+  return redirect("/user/dashboard");
 };
